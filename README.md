@@ -9,7 +9,7 @@ it may cause conflicts with other hooks.
 
 Usage : 
 - configure in portal-ext.properties the esigate template base URL "journal.preview.url.base=http://myserver.com:myport"
-The server must have access to this URL itself. If not set, teh default value is "http://localhost:8080"
+The server must have access to this URL itself. If not set, the default value is "http://localhost:8080"
 - deploy the hook to your server
 
 
