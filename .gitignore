@@ -7,3 +7,7 @@ target/
 .classpath
 .settings/
 */.settings/*
+
+# IntelliJ files #
+.idea
+*.iml
