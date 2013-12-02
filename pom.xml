@@ -43,7 +43,7 @@
 		<compiler.source.version>1.5</compiler.source.version>
 		<compiler.target.version>1.5</compiler.target.version>
 		<!-- Preview additional dependencies -->
-		<esigate.version>4.0</esigate.version>
+		<esigate.version>4.2.1</esigate.version>
 	</properties>
 
 	<build>
