@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+        >
+
+    <aop:config>
+        <aop:aspect id="openSessionAspectBatch" ref="esigateDecorator">
+            <aop:pointcut id="jspPointcut"
+                          expression="execution(* com.liferay.portlet.layoutconfiguration.util.RuntimePortlet.processXML(..)) and args(servletContext, request, response, renderRequest, renderResponse, content)"/>
+            <aop:before method="openEntry" pointcut-ref="jspPointcut"/>
+            <!--aop:after method="closeExit" pointcut-ref="jspPointcut" /-->
+        </aop:aspect>
+    </aop:config>
+    <bean id="esigateDecorator" class="fr.smile.dirtech.liferay.preview.aop.EsigateDecoratorAspect">
+    </bean>
+</beans>
